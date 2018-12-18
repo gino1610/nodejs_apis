@@ -4,7 +4,9 @@ import consign from "consign";
 const app = express();
 
 consign()
-    .include("models")
+    .include("libs/config.js")
+    // .then("models")
+    .then("db.js")
     .then("libs/middlewares.js")
     .then("routes")
     .then("libs/boot.js")
