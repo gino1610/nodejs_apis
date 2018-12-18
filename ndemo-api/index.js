@@ -7,7 +7,10 @@ const app = express();
 app.set("json spaces", 4)
 
 consign()
-    .include("routes")
+    .include("models")
+    .then("libs/middleware.js")
+    .then("routes")
+    .then("libs/boot.js")
     .into(app);
 
 // app.get("/", (req, res) => {
@@ -27,7 +30,7 @@ consign()
 //     });
 // });
 
-app.listen(PORT, () => {
-    console.log(`Ndemo API - Port ${PORT}`)
-});
+// app.listen(PORT, () => {
+//     console.log(`Ndemo API - Port ${PORT}`)
+// });
 
