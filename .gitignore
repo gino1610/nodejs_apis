@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+task-api/history/history1
+task-api/history/history2
+task-api/history/history3
+task-api/history/history4
+task-api/package-lock.json
